@@ -1,0 +1,20 @@
+﻿# Data never goes to GitHub (Kaggle rules + size)
+/data/
+*.duckdb
+*.csv
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# MLflow / notebooks
+mlruns/
+.ipynb_checkpoints/
+
+# Secrets
+kaggle.json
+.env

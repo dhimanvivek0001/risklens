@@ -1,0 +1,19 @@
+# RiskLens settings — change values here, not in code.
+
+paths:
+  raw_dir: data/raw/home-credit-default-risk
+  duckdb_file: data/processed/risklens.duckdb
+  reports_dir: reports
+
+economics:
+  net_margin: 0.08          # earned on a good loan, after funding cost
+  lgd: 0.60                 # share of loan lost when a customer defaults
+  min_approval_rate: 0.70   # business constraint
+
+baseline_rules:
+  ext_source_2_min: 0.30
+  credit_income_ratio_max: 5.0
+
+kaggle:
+  credit_competition: home-credit-default-risk
+  fraud_competition: ieee-fraud-detection

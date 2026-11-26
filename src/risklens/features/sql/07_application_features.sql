@@ -49,4 +49,25 @@ SELECT
                                                                  AS documents_provided,
 
     -- "does this person have any history?" flags
-    (b.SK_ID_CURR   IS NOT NULL)::INT
+    (b.SK_ID_CURR   IS NOT NULL)::INT                            AS has_bureau_history,
+    (p.SK_ID_CURR   IS NOT NULL)::INT                            AS has_previous_application,
+    (i.SK_ID_CURR   IS NOT NULL)::INT                            AS has_instalment_history,
+    (pos.SK_ID_CURR IS NOT NULL)::INT                            AS has_pos_cash_history,
+    (cc.SK_ID_CURR  IS NOT NULL)::INT                            AS has_credit_card_history,
+
+    -- bureau: ratios that need the application too
+    b.bur_active_debt_sum / NULLIF(b.bur_active_credit_sum, 0)   AS bur_debt_to_credit,
+    b.bur_active_debt_sum / NULLIF(a.AMT_INCOME_TOTAL, 0)        AS bur_debt_to_income,
+
+    -- every history summary
+    b.*   EXCLUDE (SK_ID_CURR),
+    p.*   EXCLUDE (SK_ID_CURR),
+    i.*   EXCLUDE (SK_ID_CURR),
+    pos.* EXCLUDE (SK_ID_CURR),
+    cc.*  EXCLUDE (SK_ID_CURR)
+FROM staging.application a
+LEFT JOIN features.bureau       b   ON b.SK_ID_CURR   = a.SK_ID_CURR
+LEFT JOIN features.previous     p   ON p.SK_ID_CURR   = a.SK_ID_CURR
+LEFT JOIN features.installments i   ON i.SK_ID_CURR   = a.SK_ID_CURR
+LEFT JOIN features.pos_cash     pos ON pos.SK_ID_CURR = a.SK_ID_CURR
+LEFT JOIN features.credit_card  cc  ON cc.SK_ID_CURR  = a.SK_ID_CURR;

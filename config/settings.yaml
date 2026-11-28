@@ -25,3 +25,4 @@ scorecard:
   min_iv: 0.02                # drop features weaker than this ("useless")
   max_corr: 0.6               # drop a feature if it repeats a stronger one this much
   max_features: 15            # a scorecard stays small enough to explain
+  max_pvalue: 0.05            # a coefficient must be statistically significant

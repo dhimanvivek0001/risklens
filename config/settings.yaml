@@ -17,3 +17,8 @@ baseline_rules:
 kaggle:
   credit_competition: home-credit-default-risk
   fraud_competition: ieee-fraud-detection
+scorecard:
+  random_seed: 42             # same seed = same split every time
+  split: [0.6, 0.2, 0.2]      # train, valid, test
+  max_bins: 10                # numeric features: up to 10 equal-sized bins
+  min_bin_share: 0.05         # categories smaller than 5% go into "Other"

@@ -22,3 +22,6 @@ scorecard:
   split: [0.6, 0.2, 0.2]      # train, valid, test
   max_bins: 10                # numeric features: up to 10 equal-sized bins
   min_bin_share: 0.05         # categories smaller than 5% go into "Other"
+  min_iv: 0.02                # drop features weaker than this ("useless")
+  max_corr: 0.6               # drop a feature if it repeats a stronger one this much
+  max_features: 15            # a scorecard stays small enough to explain

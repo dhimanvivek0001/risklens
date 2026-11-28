@@ -26,3 +26,6 @@ scorecard:
   max_corr: 0.6               # drop a feature if it repeats a stronger one this much
   max_features: 15            # a scorecard stays small enough to explain
   max_pvalue: 0.05            # a coefficient must be statistically significant
+  base_score: 600             # this score means...
+  base_odds: 50               # ...odds of 50 goods to 1 bad
+  pdo: 20                     # points to double the odds

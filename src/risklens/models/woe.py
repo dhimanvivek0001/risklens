@@ -21,12 +21,14 @@ SMOOTHING = 0.5   # added to every count so an empty bin never gives ln(0)
 def numeric_edges(x, max_bins=10):
     """Cut points that put roughly the same number of customers in each bin."""
     values = x.dropna()
-    if values.nunique() < 2:
+    uniques = np.sort(values.unique())
+    if len(uniques) < 2:
         return [-np.inf, np.inf]
+    if len(uniques) <= max_bins:                      # few values (flags, counts): one bin each
+        return [-np.inf, *uniques[:-1].tolist(), np.inf]
     inner = np.quantile(values, np.linspace(0, 1, max_bins + 1)[1:-1])
     inner = np.unique(inner[inner < values.max()])
     return [-np.inf, *inner.tolist(), np.inf]
-
 
 def assign_bins(x, spec):
     """Turn raw values into bin labels, e.g. '03: (0.31, 0.45]' or 'Missing'."""

@@ -15,8 +15,8 @@
 | suspicious - check for leakage | 1 |
 | strong | 4 |
 | medium | 3 |
-| weak | 58 |
-| useless | 45 |
+| weak | 59 |
+| useless | 44 |
 
 ## All features by IV (fitted on train only)
 
@@ -84,55 +84,55 @@
 | 60 | pos_completed_share | 0.022 | weak | 7 |
 | 61 | bur_max_overdue_amount_ever | 0.022 | weak | 6 |
 | 62 | pos_active_share | 0.022 | weak | 7 |
-| 63 | pos_max_dpd | 0.022 | weak | 4 |
-| 64 | cc_months | 0.021 | weak | 11 |
-| 65 | bur_debt_to_income | 0.021 | weak | 11 |
-| 66 | NAME_FAMILY_STATUS | 0.020 | weak | 6 |
-| 67 | AMT_REQ_CREDIT_BUREAU_YEAR | 0.020 | useless | 7 |
-| 68 | bur_active_debt_sum | 0.020 | useless | 11 |
-| 69 | pos_dpd_months_12m | 0.019 | useless | 3 |
-| 70 | pos_remaining_instalments | 0.019 | useless | 7 |
-| 71 | prev_avg_down_payment_rate | 0.018 | useless | 10 |
-| 72 | prev_avg_amount_asked | 0.017 | useless | 11 |
-| 73 | bur_loan_count | 0.016 | useless | 10 |
-| 74 | prev_max_credit | 0.016 | useless | 11 |
-| 75 | DEF_30_CNT_SOCIAL_CIRCLE | 0.016 | useless | 4 |
-| 76 | bur_avg_late_month_share | 0.015 | useless | 6 |
-| 77 | bur_credit_type_count | 0.015 | useless | 4 |
-| 78 | inst_payment_count | 0.015 | useless | 11 |
-| 79 | DEF_60_CNT_SOCIAL_CIRCLE | 0.014 | useless | 3 |
-| 80 | NAME_CONTRACT_TYPE | 0.014 | useless | 2 |
-| 81 | bur_prolong_count | 0.014 | useless | 3 |
-| 82 | bur_bad_debt_count | 0.014 | useless | 3 |
-| 83 | prev_app_count | 0.013 | useless | 10 |
-| 84 | bur_late_months_12m | 0.013 | useless | 4 |
-| 85 | has_bureau_history | 0.013 | useless | 2 |
-| 86 | prev_days_since_last_decision | 0.013 | useless | 11 |
-| 87 | ext_source_missing_count | 0.012 | useless | 4 |
-| 88 | bur_history_months | 0.012 | useless | 11 |
-| 89 | inst_late_30_share | 0.011 | useless | 3 |
-| 90 | AMT_INCOME_TOTAL | 0.011 | useless | 10 |
-| 91 | credit_to_income | 0.011 | useless | 10 |
-| 92 | prev_cash_loan_share | 0.010 | useless | 8 |
-| 93 | prev_canceled_count | 0.010 | useless | 6 |
-| 94 | NAME_HOUSING_TYPE | 0.009 | useless | 2 |
-| 95 | cc_max_dpd | 0.009 | useless | 4 |
-| 96 | bur_worst_status_ever | 0.008 | useless | 4 |
-| 97 | FLAG_OWN_CAR | 0.007 | useless | 2 |
-| 98 | documents_provided | 0.007 | useless | 2 |
+| 63 | documents_provided | 0.022 | weak | 4 |
+| 64 | pos_max_dpd | 0.022 | weak | 4 |
+| 65 | cc_months | 0.021 | weak | 11 |
+| 66 | bur_debt_to_income | 0.021 | weak | 11 |
+| 67 | NAME_FAMILY_STATUS | 0.020 | weak | 6 |
+| 68 | AMT_REQ_CREDIT_BUREAU_YEAR | 0.020 | useless | 7 |
+| 69 | bur_active_debt_sum | 0.020 | useless | 11 |
+| 70 | pos_dpd_months_12m | 0.019 | useless | 3 |
+| 71 | pos_remaining_instalments | 0.019 | useless | 7 |
+| 72 | prev_avg_down_payment_rate | 0.018 | useless | 10 |
+| 73 | prev_avg_amount_asked | 0.017 | useless | 11 |
+| 74 | bur_loan_count | 0.016 | useless | 10 |
+| 75 | prev_max_credit | 0.016 | useless | 11 |
+| 76 | DEF_30_CNT_SOCIAL_CIRCLE | 0.016 | useless | 9 |
+| 77 | DEF_60_CNT_SOCIAL_CIRCLE | 0.015 | useless | 9 |
+| 78 | bur_avg_late_month_share | 0.015 | useless | 6 |
+| 79 | bur_credit_type_count | 0.015 | useless | 7 |
+| 80 | inst_payment_count | 0.015 | useless | 11 |
+| 81 | NAME_CONTRACT_TYPE | 0.014 | useless | 2 |
+| 82 | bur_prolong_count | 0.014 | useless | 9 |
+| 83 | bur_bad_debt_count | 0.014 | useless | 3 |
+| 84 | prev_app_count | 0.013 | useless | 10 |
+| 85 | bur_late_months_12m | 0.013 | useless | 4 |
+| 86 | has_bureau_history | 0.013 | useless | 2 |
+| 87 | prev_days_since_last_decision | 0.013 | useless | 11 |
+| 88 | ext_source_missing_count | 0.012 | useless | 4 |
+| 89 | bur_history_months | 0.012 | useless | 11 |
+| 90 | inst_late_30_share | 0.011 | useless | 3 |
+| 91 | AMT_INCOME_TOTAL | 0.011 | useless | 10 |
+| 92 | credit_to_income | 0.011 | useless | 10 |
+| 93 | prev_cash_loan_share | 0.010 | useless | 8 |
+| 94 | prev_canceled_count | 0.010 | useless | 6 |
+| 95 | NAME_HOUSING_TYPE | 0.009 | useless | 2 |
+| 96 | cc_max_dpd | 0.009 | useless | 4 |
+| 97 | bur_worst_status_ever | 0.008 | useless | 7 |
+| 98 | FLAG_OWN_CAR | 0.007 | useless | 2 |
 | 99 | inst_avg_days_early | 0.007 | useless | 11 |
 | 100 | annuity_to_income | 0.007 | useless | 11 |
-| 101 | CNT_CHILDREN | 0.005 | useless | 4 |
-| 102 | cc_dpd_month_share | 0.005 | useless | 4 |
-| 103 | bur_active_credit_sum | 0.004 | useless | 11 |
-| 104 | CNT_FAM_MEMBERS | 0.004 | useless | 5 |
-| 105 | income_per_person | 0.004 | useless | 11 |
-| 106 | cc_card_count | 0.002 | useless | 3 |
-| 107 | has_credit_card_history | 0.002 | useless | 2 |
-| 108 | FLAG_OWN_REALTY | 0.000 | useless | 2 |
-| 109 | has_previous_application | 0.000 | useless | 1 |
-| 110 | has_instalment_history | 0.000 | useless | 1 |
-| 111 | has_pos_cash_history | 0.000 | useless | 1 |
+| 101 | has_previous_application | 0.006 | useless | 2 |
+| 102 | has_instalment_history | 0.006 | useless | 2 |
+| 103 | CNT_CHILDREN | 0.005 | useless | 4 |
+| 104 | cc_dpd_month_share | 0.005 | useless | 4 |
+| 105 | bur_active_credit_sum | 0.004 | useless | 11 |
+| 106 | CNT_FAM_MEMBERS | 0.004 | useless | 5 |
+| 107 | income_per_person | 0.004 | useless | 11 |
+| 108 | has_pos_cash_history | 0.003 | useless | 2 |
+| 109 | cc_card_count | 0.003 | useless | 5 |
+| 110 | has_credit_card_history | 0.002 | useless | 2 |
+| 111 | FLAG_OWN_REALTY | 0.000 | useless | 2 |
 
 ## Example WoE table: EXT_SOURCE_2
 

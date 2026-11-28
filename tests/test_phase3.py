@@ -36,7 +36,13 @@ def test_numeric_bins_missing_and_unseen():
     no_missing = fit_feature(pd.Series([1.0, 2, 3, 4]), pd.Series([0, 1, 0, 1]))
     assert transform(pd.Series([np.nan]), no_missing)[0] == 0.0   # a bin never seen in train = average
 
-
+def test_rare_flag_keeps_its_own_bin():
+    flag = pd.Series([1] * 95 + [0] * 5)                     # only 5% have a 0
+    y = pd.Series([0] * 95 + [1] * 5)
+    spec = fit_feature(flag, y)
+    assert spec["edges"] == [-np.inf, 0.0, np.inf]           # 0 and 1 each get a bin
+    assert len(spec["table"]) == 2 and spec["iv"] > 0.5
+    
 def test_split_is_stratified_and_repeatable():
     target = pd.Series([0] * 900 + [1] * 100)
     split = make_split(target, seed=42)
